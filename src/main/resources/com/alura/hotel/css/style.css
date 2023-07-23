@@ -1,0 +1,113 @@
+/**************************************************
+ * Window Header
+**************************************************/
+.close-icon {
+    -mfx-color: -mfx-red;
+    -fx-opacity: 0.5;
+}
+
+.close-icon:hover {
+    -fx-opacity: 1.0;
+}
+
+.minimize-icon {
+    -mfx-color: #ffbf37;
+    -fx-opacity: 0.5;
+}
+
+.minimize-icon:hover {
+    -fx-opacity: 1.0;
+}
+
+.always-on-top-icon {
+    -mfx-color: -mfx-purple;
+    -fx-opacity: 0.5;
+}
+
+.always-on-top-icon:hover {
+    -fx-opacity: 1.0;
+}
+
+.always-on-top-icon:always-on-top {
+    -fx-opacity: 1.0;
+}
+
+.material-design-card {
+    -fx-background-color: #272a3e;
+    -fx-border-radius: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.14), 4, 0, 0, 0);
+    -fx-padding: 10px;
+    -fx-background-radius: 30;
+}
+
+.card-image {
+    -fx-background-color: TRANSPARENT;
+    -fx-border-radius: 60px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.14), 4, 0, 0, 0);
+    -fx-padding: 10px;
+    -fx-background-radius: 30;
+}
+
+.header-label {
+    -fx-text-fill: WHITE;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 8px 0;
+    -fx-font-family: "Ubuntu Bold";
+}
+
+.body-label {
+    -fx-text-fill: WHITE;
+    -fx-font-size: 14px;
+    -fx-padding: 0 0 8px 0;
+}
+
+.footer-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: WHITE;
+}
+
+.jfx-snackbar-content {
+    -fx-background-color: #252a3d;
+}
+
+.jfx-snackbar-toast {
+    -fx-text-fill: WHITE;
+    -fx-alignment: CENTER;
+}
+
+.jfx-snackbar-action {
+    -fx-text-fill: #ff4081;
+}
+
+.mfx-progress-bar-success .bar1,
+.mfx-progress-bar-success:indeterminate .bar1,
+.mfx-progress-bar-success:indeterminate .bar2 {
+    -fx-fill: #0F9D58;
+    -fx-text-fill: WHITE;
+    -fx-alignment: CENTER;
+}
+
+.mfx-progress-bar-warning .bar1,
+.mfx-progress-bar-warning:indeterminate .bar1,
+.mfx-progress-bar-warning:indeterminate .bar2 {
+    -fx-fill: #ffeb3b;
+    -fx-text-fill: WHITE;
+    -fx-alignment: CENTER;
+}
+
+.mfx-progress-bar-error .bar1,
+.mfx-progress-bar-error:indeterminate .bar1,
+.mfx-progress-bar-error:indeterminate .bar2 {
+    -fx-fill: #f44336;
+    -fx-text-fill: #f44336;
+    -fx-alignment: CENTER;
+}
+
+.mfx-progress-bar-info .bar1,
+.mfx-progress-bar-info:indeterminate .bar1,
+.mfx-progress-bar-info:indeterminate .bar2 {
+    -fx-fill: #078fdb;
+    -fx-text-fill: #078fdb;
+    -fx-alignment: CENTER;
+}

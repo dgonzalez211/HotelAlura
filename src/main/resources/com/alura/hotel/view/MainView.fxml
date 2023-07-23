@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="730.0" prefWidth="502.0" style="-fx-background-color: #1e1c28;"
+            stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.alura.hotel.controllers.MainViewController">
+    <VBox layoutX="135.0" layoutY="310.0" prefHeight="730.0" prefWidth="502.0" style="-fx-background-radius: 60;"
+          AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+          AnchorPane.topAnchor="0.0">
+        <Pane prefHeight="384.0" prefWidth="502.0">
+            <ImageView fitHeight="416.0" fitWidth="319.0" layoutX="183.0" pickOnBounds="true" preserveRatio="true">
+                <viewport>
+                    <Rectangle2D height="360.0" minY="20.0" width="300.0"/>
+                </viewport>
+                <Image url="@../images/layout/hotel_background.png"/>
+            </ImageView>
+        </Pane>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+            <Label layoutX="24.0" layoutY="21.0" text="Book hotel&#10;with ease" textFill="WHITE">
+                <font>
+                    <Font name="Ubuntu Bold" size="50.0"/>
+                </font>
+            </Label>
+            <Label layoutX="24.0" layoutY="124.0" prefHeight="60.0" prefWidth="38.0" text="..." textFill="WHITE">
+                <font>
+                    <Font name="Ubuntu Bold" size="52.0"/>
+                </font>
+            </Label>
+        </Pane>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+            <MFXButton fx:id="signInButton" buttonType="RAISED" layoutX="63.0" layoutY="14.0" prefHeight="60.0"
+                       prefWidth="376.0"
+                       style="-fx-background-color: #088eda; -fx-text-fill: #ffffff; -fx-background-radius: 20;"
+                       text="Sign in" textFill="WHITE">
+                <graphic>
+                    <FontAwesomeIconView fill="#6fbcea" glyphName="ENVELOPE" size="22"/>
+                </graphic>
+                <font>
+                    <Font name="Ubuntu Bold" size="16.0"/>
+                </font>
+            </MFXButton>
+            <MFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="89.0" prefHeight="52.0"
+                       prefWidth="191.0"
+                       style="-fx-background-color: transparent; -fx-border-radius: 60; -fx-border-color: #494852;"
+                       text=" " textAlignment="CENTER">
+                <graphic>
+                    <ImageView fitHeight="29.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/layout/facebook_icon.png"/>
+                    </ImageView>
+                </graphic>
+            </MFXButton>
+            <MFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="263.0" layoutY="89.0" prefHeight="52.0"
+                       prefWidth="176.0"
+                       style="-fx-background-color: transparent; -fx-border-radius: 60; -fx-border-color: #494852;"
+                       text=" " textAlignment="CENTER">
+                <graphic>
+                    <ImageView fitHeight="29.0" fitWidth="64.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/layout/google_icon.png"/>
+                    </ImageView>
+                </graphic>
+            </MFXButton>
+        </Pane>
+    </VBox>
+    <HBox prefHeight="60.0" prefWidth="501.0" spacing="10.0" style="-fx-background-color: TRANSPARENT;">
+        <padding>
+            <Insets left="10.0" top="10.0"/>
+        </padding>
+        <MFXFontIcon fx:id="alwaysOnTopIcon" description="fas-circle" size="15.0" styleClass="always-on-top-icon"/>
+        <MFXFontIcon fx:id="minimizeIcon" description="fas-circle" size="15.0" styleClass="minimize-icon"/>
+        <MFXFontIcon fx:id="closeIcon" description="fas-circle" size="15.0" styleClass="close-icon"/>
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+    </HBox>
+</AnchorPane>

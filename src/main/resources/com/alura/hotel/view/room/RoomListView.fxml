@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXRectangleToggleNode?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="rootPane" prefHeight="930.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;"
+            xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.alura.hotel.controllers.RoomListViewController" stylesheets="@../../css/style.css">
+    <HBox alignment="TOP_RIGHT" prefHeight="64.0" prefWidth="540.0" spacing="10.0"
+          style="-fx-background-color: TRANSPARENT;">
+        <padding>
+            <Insets left="10.0" right="10.0" top="10.0"/>
+        </padding>
+        <MFXFontIcon fx:id="alwaysOnTopIcon" description="fas-circle" size="15.0" styleClass="always-on-top-icon"/>
+        <MFXFontIcon fx:id="minimizeIcon" description="fas-circle" size="15.0" styleClass="minimize-icon"/>
+        <MFXFontIcon fx:id="closeIcon" description="fas-circle" size="15.0" styleClass="close-icon"/>
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+    </HBox>
+    <Pane prefHeight="930.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <VBox prefHeight="930.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;">
+            <Pane prefHeight="157.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;">
+                <MFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="495.0" layoutY="93.0"
+                           style="-fx-background-color: TRANSPARENT;" text=" " textAlignment="CENTER">
+                    <graphic>
+                        <FontAwesomeIconView fill="#078fdb" glyphName="BELL"/>
+                    </graphic>
+                </MFXButton>
+                <MFXRectangleToggleNode layoutX="14.0" layoutY="91.0" style="-fx-background-color: #272a3e;" text=" "/>
+                <MFXRectangleToggleNode layoutX="121.0" layoutY="91.0" style="-fx-background-color: #272a3e;" text=" "/>
+                <MFXRectangleToggleNode layoutX="223.0" layoutY="91.0" style="-fx-background-color: #272a3e;" text=" "/>
+                <MFXButton fx:id="backButton" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0"
+                           style="-fx-background-color: TRANSPARENT;" text=" " textAlignment="CENTER" textFill="WHITE">
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT"/>
+                    </graphic>
+                </MFXButton>
+            </Pane>
+            <Pane prefHeight="809.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;">
+                <MFXScrollPane fx:id="roomsScrollPane" hbarPolicy="NEVER" prefHeight="797.0" prefWidth="540.0"
+                               style="-fx-background-color: #1e1c29;" vbarPolicy="NEVER"/>
+            </Pane>
+        </VBox>
+    </Pane>
+
+</AnchorPane>

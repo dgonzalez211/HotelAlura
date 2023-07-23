@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="930.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;"
+            stylesheets="@../../css/style.css" xmlns="http://javafx.com/javafx/20.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alura.hotel.controllers.UserBookingsViewController">
+    <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="540.0" spacing="10.0"
+          style="-fx-background-color: TRANSPARENT;">
+        <padding>
+            <Insets left="10.0" right="10.0" top="10.0"/>
+        </padding>
+        <MFXFontIcon fx:id="alwaysOnTopIcon" description="fas-circle" size="15.0" styleClass="always-on-top-icon"/>
+        <MFXFontIcon fx:id="minimizeIcon" description="fas-circle" size="15.0" styleClass="minimize-icon"/>
+        <MFXFontIcon fx:id="closeIcon" description="fas-circle" size="15.0" styleClass="close-icon"/>
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+    </HBox>
+    <VBox fx:id="mainContainer" layoutX="143.0" layoutY="180.0" prefHeight="930.0" prefWidth="540.0"
+          style="-fx-background-color: #1e1c29;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Pane prefHeight="126.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;">
+            <MFXButton fx:id="backButton" layoutX="14.0" layoutY="14.0" style="-fx-background-color: TRANSPARENT;"
+                       text=" ">
+                <graphic>
+                    <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT"/>
+                </graphic>
+            </MFXButton>
+            <Label layoutX="32.0" layoutY="63.0" text="My Bookings" textFill="WHITE">
+                <font>
+                    <Font name="Ubuntu Bold" size="26.0"/>
+                </font>
+            </Label>
+        </Pane>
+        <Pane prefHeight="804.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;">
+            <MFXScrollPane fx:id="bookingsScrollPane" prefHeight="804.0" prefWidth="540.0"
+                           style="-fx-background-color: #1e1c29;"/>
+        </Pane>
+    </VBox>
+</AnchorPane>

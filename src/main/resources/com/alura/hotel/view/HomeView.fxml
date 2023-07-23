@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXComboBox?>
+<?import io.github.palexdev.materialfx.controls.MFXRectangleToggleNode?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="930.0" prefWidth="540.0" style="-fx-background-color: #1e1c29;" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.alura.hotel.controllers.HomeViewController">
+    <Pane layoutY="54.0" prefHeight="168.0" prefWidth="559.0">
+
+        <MFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="450.0" layoutY="14.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 360;" text=" " textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="DejaVu Sans Mono for Powerline" size="31.0" />
+            </font>
+            <graphic>
+                <FontAwesomeIconView fill="#078fdb" glyphName="SEARCH" size="20" textAlignment="CENTER">
+                    <font>
+                        <Font size="12.0" />
+                    </font>
+                </FontAwesomeIconView>
+            </graphic>
+        </MFXButton>
+        <Pane layoutX="42.0" layoutY="16.0" prefHeight="60.0" prefWidth="60.0" style="-fx-background-radius: 100;">
+            <effect>
+                <DropShadow offsetX="1.0" offsetY="4.0" spread="0.1">
+                    <color>
+                        <Color red="0.15294118225574493" green="0.16470588743686676" blue="0.239215686917305" />
+                    </color>
+                </DropShadow>
+            </effect>
+            <ImageView fx:id="userImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                <image>
+                    <Image url="@../images/layout/user_icon.jpg" />
+                </image>
+            </ImageView>
+        </Pane>
+        <Label layoutX="124.0" layoutY="22.0" text="Good Morning," textFill="WHITE">
+            <font>
+                <Font name="Ubuntu Regular" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="usernameLabel" layoutX="124.0" layoutY="46.0" text="{username}" textFill="WHITE">
+            <font>
+                <Font name="Ubuntu Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="58.0" layoutY="100.0" text="Find Alura Hotel's That's            &amp;&#10;             To You" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Ubuntu Bold" size="28.0" />
+            </font>
+        </Label>
+        <Label layoutX="392.0" layoutY="100.0" text="Good" textAlignment="CENTER" textFill="#1a43e6">
+            <font>
+                <Font name="Ubuntu Bold" size="28.0" />
+            </font>
+        </Label>
+        <Label layoutX="179.0" layoutY="132.0" text="Suites" textAlignment="CENTER" textFill="#1a43e6">
+            <font>
+                <Font name="Ubuntu Bold" size="28.0" />
+            </font>
+        </Label>
+      <ImageView fitHeight="66.0" fitWidth="70.0" layoutX="357.0" layoutY="115.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/layout/rocket.gif" />
+         </image>
+      </ImageView>
+    </Pane>
+    <VBox fx:id="mainContainer" layoutY="226.0" prefHeight="702.0" prefWidth="559.0">
+        <Pane prefHeight="282.0" prefWidth="559.0">
+            <Pane layoutX="41.0" layoutY="28.0" prefHeight="230.0" prefWidth="477.0">
+                <MFXComboBox floatMode="ABOVE" layoutX="35.0" layoutY="34.0" prefHeight="41.0" prefWidth="197.0" promptText="Price range" style="-fx-border-color: #078fdb;" />
+                <MFXComboBox floatMode="ABOVE" layoutX="247.0" layoutY="34.0" prefHeight="41.0" prefWidth="197.0" promptText="Room type" style="-fx-border-color: #078fdb;" text=" " />
+                <MFXComboBox floatMode="ABOVE" layoutX="35.0" layoutY="94.0" prefHeight="41.0" prefWidth="409.0" promptText="Select location..." style="-fx-border-color: #078fdb;" />
+                <MFXButton fx:id="findButton" buttonType="RAISED" layoutX="34.0" layoutY="160.0" prefHeight="41.0" prefWidth="409.0" rippleColor="#3f3d4a" style="-fx-background-color: #078fdb; -fx-text-fill: WHITE;" text="Find" textFill="WHITE">
+                    <font>
+                        <Font name="Ubuntu Bold" size="21.0" />
+                    </font>
+                </MFXButton>
+                <effect>
+                    <DropShadow offsetX="2.0" offsetY="2.0">
+                        <color>
+                            <Color red="0.7450980544090271" green="0.7450980544090271" blue="0.7450980544090271" />
+                        </color>
+                    </DropShadow>
+                </effect>
+            </Pane>
+        </Pane>
+        <Pane prefHeight="66.0" prefWidth="559.0">
+            <Pane layoutX="41.0" layoutY="3.0" prefHeight="60.0" prefWidth="477.0" style="-fx-background-color: #3f3d4a; -fx-background-radius: 100;">
+                <MFXRectangleToggleNode layoutX="8.0" layoutY="6.0" prefHeight="49.0" prefWidth="230.0" style="-fx-border-radius: 60; -fx-background-radius: 60;" text="Recomendation" />
+                <MFXRectangleToggleNode layoutX="239.0" layoutY="6.0" prefHeight="49.0" prefWidth="230.0" style="-fx-border-radius: 60; -fx-background-radius: 60;" text="Near to You" />
+            </Pane>
+        </Pane>
+        <MFXScrollPane fx:id="recommendationsScrollPane" hbarPolicy="NEVER" pannable="true" prefHeight="346.0" prefWidth="559.0" style="-fx-background-color: #1e1c29;" vbarPolicy="NEVER" />
+    </VBox>
+
+    <Pane layoutY="860.0" prefHeight="70.0" prefWidth="559.0">
+        <MFXButton fx:id="homeButton" buttonType="RAISED" contentDisplay="CENTER" layoutX="54.0" layoutY="7.0" prefHeight="41.0" prefWidth="88.0" rippleColor="#3f3d4a" style="-fx-background-color: #078fdb;" text=" " textAlignment="CENTER" textFill="WHITE">
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="HOME" />
+            </graphic>
+            <font>
+                <Font name="Ubuntu Regular" size="13.0" />
+            </font>
+        </MFXButton>
+        <MFXButton buttonType="RAISED" contentDisplay="CENTER" layoutX="170.0" layoutY="7.0" prefHeight="41.0" prefWidth="88.0" rippleColor="#3f3d4a" style="-fx-background-color: #078fdb;" text=" ">
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="BELL" />
+            </graphic>
+            <font>
+                <Font name="Ubuntu Regular" size="13.0" />
+            </font>
+        </MFXButton>
+        <MFXButton fx:id="bookingsButton" buttonType="RAISED" contentDisplay="CENTER" layoutX="298.0" layoutY="7.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="88.0" rippleColor="#3f3d4a" style="-fx-background-color: #078fdb;" text=" ">
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="BOOK" />
+            </graphic>
+        </MFXButton>
+        <MFXButton fx:id="accountButton" buttonType="RAISED" contentDisplay="CENTER" layoutX="418.0" layoutY="7.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="88.0" rippleColor="#3f3d4a" style="-fx-background-color: #078fdb;" text=" ">
+            <graphic>
+                <FontAwesomeIconView fill="WHITE" glyphName="USER" />
+            </graphic>
+        </MFXButton>
+    </Pane>
+
+    <HBox prefHeight="60.0" prefWidth="559.0" spacing="10.0" style="-fx-background-color: TRANSPARENT;">
+        <padding>
+            <Insets left="10.0" top="10.0" />
+        </padding>
+        <MFXFontIcon fx:id="alwaysOnTopIcon" description="fas-circle" size="15.0" styleClass="always-on-top-icon" />
+        <MFXFontIcon fx:id="minimizeIcon" description="fas-circle" size="15.0" styleClass="minimize-icon" />
+        <MFXFontIcon fx:id="closeIcon" description="fas-circle" size="15.0" styleClass="close-icon" />
+        <opaqueInsets>
+            <Insets />
+        </opaqueInsets>
+    </HBox>
+
+</AnchorPane>

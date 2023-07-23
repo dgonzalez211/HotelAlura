@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import io.github.palexdev.materialfx.controls.MFXToggleButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<?import io.github.palexdev.mfxresources.fonts.MFXFontIcon?>
+<AnchorPane fx:id="rootPane" prefHeight="730.0" prefWidth="502.0" style="-fx-background-color: #1e1c29;"
+            xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.alura.hotel.controllers.SignUpViewController"  stylesheets="@../../css/style.css">
+    <HBox prefHeight="60.0" prefWidth="501.0" spacing="10.0" style="-fx-background-color: TRANSPARENT; -fx-alignment: TOP_RIGHT">
+        <padding>
+            <Insets left="10.0" top="10.0" right="10.0"/>
+        </padding>
+        <MFXFontIcon fx:id="alwaysOnTopIcon" description="fas-circle" size="15.0" styleClass="always-on-top-icon"/>
+        <MFXFontIcon fx:id="minimizeIcon" description="fas-circle" size="15.0" styleClass="minimize-icon"/>
+        <MFXFontIcon fx:id="closeIcon" description="fas-circle" size="15.0" styleClass="close-icon"/>
+        <opaqueInsets>
+            <Insets/>
+        </opaqueInsets>
+    </HBox>
+    <Label fx:id="createAccountLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="122.0" layoutY="38.0"
+           text="Create Account" textAlignment="CENTER" textFill="WHITE">
+        <font>
+            <Font name="Ubuntu Bold" size="35.0"/>
+        </font>
+    </Label>
+    <Label fx:id="signUpSubtitle" layoutX="29.0" layoutY="111.0"
+           text="Sign up to keep exploring&#10;amazing hotels in Alura Hotels around the world!" textFill="WHITE">
+        <font>
+            <Font name="Ubuntu Regular" size="13.0"/>
+        </font>
+    </Label>
+    <MFXTextField fx:id="firstNameField" floatMode="ABOVE" layoutX="29.0" layoutY="178.0" prefHeight="51.0"
+                  prefWidth="218.0" promptText="First Name" style="-fx-border-color: #078fdb;">
+        <textFill>
+            <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716"/>
+        </textFill>
+        <font>
+            <Font name="Ubuntu Regular" size="13.0"/>
+        </font>
+    </MFXTextField>
+    <MFXTextField fx:id="lastNameField" floatMode="ABOVE" layoutX="256.0" layoutY="178.0" prefHeight="51.0"
+                  prefWidth="218.0" promptText="Last Name" style="-fx-border-color: #078fdb;">
+        <font>
+            <Font name="Ubuntu Regular" size="13.0"/>
+        </font>
+    </MFXTextField>
+    <MFXTextField fx:id="usernameSignUpField" floatMode="ABOVE" layoutX="29.0" layoutY="240.0" prefHeight="51.0"
+                  prefWidth="444.0" promptText="Username" style="-fx-border-color: #078fdb;">
+        <font>
+            <Font name="Ubuntu Regular" size="13.0"/>
+        </font>
+    </MFXTextField>
+    <MFXPasswordField fx:id="passwordSignUpField" floatMode="ABOVE" layoutX="29.0" layoutY="304.0" prefHeight="51.0"
+                      prefWidth="444.0" promptText="Password" style="-fx-border-color: #078fdb;">
+        <font>
+            <Font name="Ubuntu Regular" size="13.0"/>
+        </font>
+    </MFXPasswordField>
+    <MFXTextField fx:id="phoneNumberField" floatMode="ABOVE" layoutX="30.0" layoutY="369.0" prefHeight="51.0"
+                  prefWidth="444.0" promptText="Phone Number" style="-fx-border-color: #078fdb;">
+        <font>
+            <Font name="Ubuntu Regular" size="13.0"/>
+        </font>
+    </MFXTextField>
+    <MFXTextField fx:id="emailField" floatMode="ABOVE" layoutX="30.0" layoutY="431.0" prefHeight="51.0"
+                  prefWidth="444.0" promptText="Email" style="-fx-border-color: #078fdb;">
+        <font>
+            <Font name="Ubuntu Regular" size="13.0"/>
+        </font>
+    </MFXTextField>
+    <MFXButton fx:id="signUpButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="30.0"
+               layoutY="573.0" onMousePressed="#handleSignUp" prefHeight="48.0" prefWidth="444.0"
+               style="-fx-background-color: #078fdb; -fx-text-fill: WHITE; -fx-background-radius: 60;"
+               text="LET'S GET STARTED" textFill="WHITE">
+        <font>
+            <Font name="Ubuntu Bold" size="14.0"/>
+        </font>
+    </MFXButton>
+    <MFXToggleButton fx:id="newsletterToggle" layoutX="29.0" layoutY="499.0" text="Subscribe to newsletter"
+                     textFill="WHITE">
+        <font>
+            <Font name="Ubuntu Regular" size="13.0"/>
+        </font>
+    </MFXToggleButton>
+    <Label fx:id="termsConditionsLabel" layoutX="97.0" layoutY="662.0"
+           text="By creating an account, you agree to our&#10;Terms &amp; Conditions and agree to Privacy Policy"
+           textAlignment="CENTER" textFill="WHITE"/>
+    <FontAwesomeIconView fill="WHITE" glyphName="ROCKET" layoutX="155.0" layoutY="601.0"/>
+    <MFXButton fx:id="backButton" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="14.0"
+               style="-fx-background-color: transparent;" text=" " textFill="WHITE">
+        <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="22"/>
+        </graphic>
+    </MFXButton>
+</AnchorPane>
